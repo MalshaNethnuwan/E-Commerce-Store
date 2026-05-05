@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // TSConfig for modules that run in Node.js environment via either transpilation or type-stripping.
 {
   "extends": "@tsconfig/node24/tsconfig.json",
@@ -25,4 +26,16 @@
     // Specified here to keep it out of the root directory.
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo"
   }
+=======
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "types": ["node"]
+  },
+  "include": ["vite.config.ts", "tailwind.config.js", "postcss.config.js"]
+>>>>>>> cf7a1f4adba74e90be87bf40b68b64bedc690706
 }
